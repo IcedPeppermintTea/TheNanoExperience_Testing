@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/aylee/IdeaProjects/TheNanoExperience_Testing/src/test/java">
+        <classes>
+            <class name="NavigationBar">
+            </class>
+            <class name="HomePage">
+            </class>
+            <class name="ShoulderAndElbow">
+            </class>
+            <class name="FootAndAnkle">
+            </class>
+            <class name="FAQs">
+            </class>
+            <class name="Blogs">
+            </class>
+            <class name="FAD">
+            </class>
+            <class name="Footer">
+            </class>
+        </classes>
+    </test>
+</suite>
