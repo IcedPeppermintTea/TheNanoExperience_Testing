@@ -4,20 +4,97 @@
     <test verbose="2" preserve-order="true" name="C:/Users/aylee/IdeaProjects/TheNanoExperience_Testing/src/test/java">
         <classes>
             <class name="NavigationBar">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlAndTitle"/>
+                    <include name="callToActionButtonLinks"/>
+                    <include name="treatmentOptionLinks"/>
+                    <include name="whereDoesItHurtLinks"/>
+                    <include name="resourceLinks"/>
+                    <include name="connectWithUsLinks"/>
+                </methods>
             </class>
             <class name="HomePage">
-            </class>
-            <class name="ShoulderAndElbow">
-            </class>
-            <class name="FootAndAnkle">
-            </class>
-            <class name="FAQs">
-            </class>
-            <class name="Blogs">
-            </class>
-            <class name="FAD">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlAndTitle"/>
+                    <include name="bannerLinks"/>
+                    <include name="referenceLinks"/>
+                    <include name="fastRecoveryDropdown"/>
+                    <include name="downloadBrochure"/>
+                    <include name="anatomyGraphicLinks"/>
+                    <include name="findDoctorSearch"/>
+                    <include name="downloadQuestionList"/>
+                </methods>
             </class>
             <class name="Footer">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlTitle"/>
+                    <include name="footerHomeLink"/>
+                    <include name="checkSiteLinks"/>
+                    <include name="checkLegalLinks"/>
+                    <include name="checkExploreLinks"/>
+                    <include name="checkSupportLinks"/>
+                </methods>
+            </class>
+            <class name="FootAndAnkle">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlTitle"/>
+                    <include name="checkAccordions"/>
+                    <include name="checkRecoveryTabs"/>
+                    <include name="checkFadForm"/>
+                </methods>
+            </class>
+            <class name="ShoulderAndElbow">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlAndTitle"/>
+                    <include name="referenceLinks"/>
+                    <include name="embeddedVideo"/>
+                    <include name="whatCanNanoTreatDropdown"/>
+                    <include name="recoveryTimelineDropdown"/>
+                    <include name="findDoctorSearch"/>
+                    <include name="downloadQuestionList"/>
+                </methods>
+            </class>
+            <class name="FAQs">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlAndTitle"/>
+                    <include name="connectWithDoctorButton"/>
+                    <include name="faqExpansionDropdown"/>
+                    <include name="faqReferenceLinks"/>
+                    <include name="findDoctorSearch"/>
+                    <include name="downloadQuestionList"/>
+                </methods>
+            </class>
+            <class name="FAD">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlTitle"/>
+                    <include name="enterLocationAndSelectFirstOption"/>
+                    <include name="selectDistance"/>
+                    <include name="checkDownloadQuestionsLink"/>
+                </methods>
+            </class>
+            <class name="Blogs">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="close"/>
+                    <include name="urlAndTitle"/>
+                    <include name="selectBlogsLinks"/>
+                    <include name="findDoctorSearch"/>
+                    <include name="downloadQuestionList"/>
+                </methods>
             </class>
         </classes>
     </test>

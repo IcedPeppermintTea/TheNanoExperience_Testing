@@ -34,7 +34,7 @@ public class FootAndAnkle {
     // Set up the webdriver before we start running the class
     @BeforeClass
     public void setUp() throws InterruptedException {
-       // System.setProperty("webdriver.chrome.driver", "WebDrivers/Chromedriver/chromedriver.exe");
+
         driver = new ChromeDriver();
         execute = (JavascriptExecutor) driver;
 
@@ -75,7 +75,7 @@ public class FootAndAnkle {
         // Loop through each accordion toggle
         for (WebElement toggle : accordionToggles) {
             // Scroll somewhere near the accordion (to make it visible)
-            execute.executeScript("window.scrollTo(0, arguments[0].getBoundingClientRect().top + window.pageYOffset - 100);", toggle);
+            execute.executeScript("window.scrollTo(0, arguments[0].getBoundingClientRect().top + window.pageYOffset - 300);", toggle);
             Thread.sleep(2000); // load scroll
 
             // Click the accordion
@@ -108,7 +108,7 @@ public class FootAndAnkle {
 
             // Scroll to the tab (I adjusted to avoid sticky nav)
             ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, " +
-                    "arguments[0].getBoundingClientRect().top + window.pageYOffset - 400);", tab);
+                    "arguments[0].getBoundingClientRect().top + window.pageYOffset - 200);", tab);
             Thread.sleep(3000); // wait for scroll to load
 
             // Click the tab

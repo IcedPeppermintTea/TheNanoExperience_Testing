@@ -30,7 +30,6 @@ public class NavigationBar {
     // Set up the webdriver before we start running the class
     @BeforeClass
     public void setUp() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver", "WebDrivers/Chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
 
         // Open and maximize the Nano Experience page
@@ -47,7 +46,7 @@ public class NavigationBar {
 
     // ---------------------- Test Functions ------------------------------------
     @Test(priority = 1)
-    void url_and_title() {
+    void urlAndTitle() {
         // Get and print URL of webpage
         String pageURL = driver.getCurrentUrl();
         System.out.print("Current Page URL: ");
@@ -62,7 +61,7 @@ public class NavigationBar {
     }
 
     @Test(priority = 2)
-    void call_to_action_button_links() throws InterruptedException {
+    void callToActionButtonLinks() throws InterruptedException {
         // Click on Arthrex Nano Experience logo
         driver.findElement(By.cssSelector(".logo-container")).click();
         Thread.sleep(2000);
@@ -89,7 +88,7 @@ public class NavigationBar {
     }
 
     @Test(priority = 3)
-    void treatment_option_links() throws InterruptedException {
+    void treatmentOptionLinks() throws InterruptedException {
         // Click to expand Treatment Options menu
         driver.findElement(By.cssSelector("#w-dropdown-toggle-0 > div.toggle-text")).click();
         Thread.sleep(2000);
@@ -128,7 +127,7 @@ public class NavigationBar {
     }
 
     @Test (priority = 4)
-    void where_does_it_hurt_links() throws InterruptedException {
+    void whereDoesItHurtLinks() throws InterruptedException {
         // Click to expand Treatment Options menu
         driver.findElement(By.cssSelector("#w-dropdown-toggle-0 > div.toggle-text")).click();
         Thread.sleep(2000);
@@ -179,13 +178,109 @@ public class NavigationBar {
     }
 
     @Test (priority = 5)
-    void resource_links() throws InterruptedException {
+    void resourceLinks() throws InterruptedException {
+        // Click to expand Resources menu
+        driver.findElement(By.cssSelector("#w-dropdown-toggle-2 > div.toggle-text")).click();
+        Thread.sleep(2000);
 
+        // Click on About Arthrex option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[1]")).click();
+        Thread.sleep(2000);
+
+        // Click to expand Resources menu
+        driver.findElement(By.cssSelector("#w-dropdown-toggle-2 > div.toggle-text")).click();
+        Thread.sleep(2000);
+
+        // Click on Find a Doctor option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[2]")).click();
+        Thread.sleep(2000);
     }
 
     @Test (priority = 6)
-    void connect_with_use_links() throws InterruptedException {
+    void connectWithUsLinks() throws InterruptedException {
+        // Click to expand Resources menu
+        driver.findElement(By.cssSelector("#w-dropdown-toggle-2 > div.toggle-text")).click();
+        Thread.sleep(2000);
 
+        // Click on Facebook option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[3]")).click();
+        Thread.sleep(6000);
+
+        // Get List of Window Handles
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+
+        // Switch to Facebook Tab and Close
+        driver.switchTo().window(tabs.getLast());
+        Thread.sleep(2000);
+        driver.close();
+
+        // Switch to Nano Experience Site
+        driver.switchTo().window(tabs.getFirst());
+        Thread.sleep(2000);
+
+        // Click on Instagram option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[4]")).click();
+        Thread.sleep(6000);
+
+        // Refresh List of Window Handles
+        tabs = new ArrayList<>(driver.getWindowHandles());
+
+        // Switch to Instagram Tab and Close
+        driver.switchTo().window(tabs.getLast());
+        Thread.sleep(2000);
+        driver.close();
+
+        // Switch to Nano Experience Site
+        driver.switchTo().window(tabs.getFirst());
+        Thread.sleep(2000);
+
+        // Click on LinkedIn option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[5]")).click();
+        Thread.sleep(6000);
+
+        // Refresh List of Window Handles
+        tabs = new ArrayList<>(driver.getWindowHandles());
+
+        // Switch to LinkedIn Tab and Close
+        driver.switchTo().window(tabs.getLast());
+        Thread.sleep(2000);
+        driver.close();
+
+        // Switch to Nano Experience Site
+        driver.switchTo().window(tabs.getFirst());
+        Thread.sleep(2000);
+
+        // Click on Twitter option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[6]")).click();
+        Thread.sleep(6000);
+
+        // Refresh List of Window Handles
+        tabs = new ArrayList<>(driver.getWindowHandles());
+
+        // Switch to Twitter Tab and Close
+        driver.switchTo().window(tabs.getLast());
+        Thread.sleep(2000);
+        driver.close();
+
+        // Switch to Nano Experience Site
+        driver.switchTo().window(tabs.getFirst());
+        Thread.sleep(2000);
+
+        // Click on YouTube option
+        driver.findElement(By.xpath("//*[@id='w-dropdown-list-2']/div/a[7]")).click();
+        Thread.sleep(6000);
+
+        // Refresh List of Window Handles
+        tabs = new ArrayList<>(driver.getWindowHandles());
+
+        // Switch to YouTube Tab and Close
+        driver.switchTo().window(tabs.getLast());
+        Thread.sleep(2000);
+        driver.close();
+
+        // Switch to Nano Experience Site
+        driver.switchTo().window(tabs.getFirst());
+        Thread.sleep(2000);
     }
 
 }

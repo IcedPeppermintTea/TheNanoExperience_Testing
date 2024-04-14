@@ -33,7 +33,7 @@ public class FAQs {
     // Set up the webdriver before we start running the class
     @BeforeClass
     public void setUp() throws InterruptedException {
-       // System.setProperty("webdriver.chrome.driver", "WebDrivers/Chromedriver/chromedriver.exe");
+
         driver = new ChromeDriver();
 
         // Reassign executor instance
